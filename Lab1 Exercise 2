@@ -1,0 +1,66 @@
+Laboratory1 exercise 2 
+Scrieti un program Java care rezolva ecuatia de gradul 2 cu coeficientii a, b, c primiti ca argumente de la linia de comanda. Programul trebuie sa trateze toate situatiile care pot aparea. 
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Exercise2;
+
+import static java.lang.Math.sqrt;
+import java.util.Scanner;
+
+/**
+ * 
+ * @author Ciprian
+ * IMPLEMENT FOR NEGATIVE NUMBERS? ?? 
+ */
+public class Exercise2 {
+    
+    public static void main(String[] args){
+        
+        int delta;
+        float result1;
+        float result2;
+        
+         Scanner keyboard = new Scanner(System.in);
+        
+        System.out.println("Enter a: ");
+        int a = keyboard.nextInt();
+        System.out.println("Enter b: ");
+        int b = keyboard.nextInt();
+        System.out.println("Enter c: ");
+        int c = keyboard.nextInt();
+        
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println("Ecuatia este: " + a+"^2+"+b+"+"+c+"=0");
+        
+        delta = b*b-4*a*c;
+        System.out.println(delta);
+        
+        if(delta < 0){
+            System.out.println("Ecuatia nu are solutii reale");
+        }
+        else
+            if(delta == 0){
+                
+                result1 = (-b)/(2*a);
+                System.out.println("Ecuatia are 2 solutii reale si egale: "+ result1);
+                }
+            else{
+                result1 = (float) (((-b)+sqrt(delta))/(float)(2*a));
+                result2 = (float) (((-b)-sqrt(delta))/(float)(2*a));
+                System.out.println("Ecuatia are 2 solutii reale si distincte: "+ result1+" si: "+ result2);
+            }
+        
+        
+        
+        
+    }
+    
+}
+
