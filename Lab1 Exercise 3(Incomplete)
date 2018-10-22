@@ -1,0 +1,90 @@
+Exercise 3 
+
+Sa se scrie o aplicatie Java care :
+genereaza un vector de n numere intregi cuprinse in intervalul [a,b], unde a,b si n sunt primite ca argumente de la linia de comanda
+sorteaza vectorul generat folosind, pe rand, algoritmul BubbleSort si metoda sort din clasa Arrays.
+afiseaza timpii estimativi de executie pentru fiecare din procedee
+
+Pentru aflarea timpului necesar executie unei secvente de cod se va folosi metoda currentTimeMillis din clasa System
+
+// Trebuie sa implementez Bubble Sort
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab1Exxercise3;
+
+
+import static java.lang.System.currentTimeMillis;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Vector;
+
+/**
+ *
+ * @author Ciprian
+ */
+public class Vectors {
+    
+    
+    public static void main(String[] args){
+
+    Scanner keyboard = new Scanner(System.in);
+
+    
+    
+    System.out.println("Introduce n:");
+    int n = keyboard.nextInt();
+    System.out.println("Introduce a:");
+    int a = keyboard.nextInt();
+    System.out.println("Introduce b:");
+    int b = keyboard.nextInt(); 
+    int Low = a;
+    int High = b;
+    int result;
+    Random rand = new Random();
+    long t1 = 0, t2 = 0;
+    
+    Vector<Integer> vec = new Vector<Integer>(n);
+    t1 = (int) System.currentTimeMillis();
+    //t1 = (int) System.nanoTime();
+    for(int i = 0;i<n; i++){
+        
+        
+        result = rand.nextInt(High-Low+1) + Low;
+        vec.add(result);
+        
+    }
+    
+    for(int i = 0;i < n;i++){
+        
+       System.out.println(vec.get(i));
+      
+    }
+    
+    Collections.sort(vec);
+    System.out.println("After Collection Method");
+    
+    for(int i = 0;i < n;i++){
+        t2 = (int) System.currentTimeMillis();
+      //  t2 = (int) System.nanoTime();
+       System.out.println(vec.get(i));
+        
+        
+    }
+    t2 = (int) System.currentTimeMillis();
+    long elapsedTime = t2 - t1;
+    
+    System.out.println("Total time is:" + t1 + "s");
+    System.out.println("Total time is:" + t2 + "s");
+    System.out.println("Total time is:" + elapsedTime + "ms");
+}
+    
+}
+
+ 
