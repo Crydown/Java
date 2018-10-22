@@ -1,0 +1,63 @@
+Laboratory 1 Exercise 1
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package laboratory1;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+
+
+/**
+ *
+ * @author Ciprian
+ */
+public class Laboratory1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws InterruptedException, IOException {
+        // TODO code application logic here
+        
+        char c;
+        int count = 0;
+      //1000  int t = 0;
+      // To add  --- implement "introduce t or set to default? 
+      
+      
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.println("Enter time between displays: ");
+        int t = keyboard.nextInt();
+       
+        
+        
+        
+        for(int i=0;i<=255;i++){
+            
+            c = (char)i;
+            count++;
+            Thread.sleep(t);
+            System.out.println(i + "-->" + c);
+            if(count == 21){
+                
+                System.out.println("Press enter...");
+                System.in.read();
+                System.in.skip(System.in.available());
+                count = 0;
+                
+            }
+            
+            
+        }
+        
+        
+    }
+    
+}
