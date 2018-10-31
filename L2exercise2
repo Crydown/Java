@@ -1,0 +1,45 @@
+package Laboratory2;
+
+/**
+ * L2Ex2.Definiti si implementati clasa Complex, care sa permita lucrul cu numere complexe Clasa va contine metodele uzuale.
+ * @author Ciprian
+ */
+public class Complex {
+    
+    double real;
+    double imag;
+    
+    
+    public Complex(double real, double imag) {
+        
+        this.real = real;
+        this.imag = imag;
+        
+        
+    }
+    public static void main(String[] args) {
+    
+        
+        Complex n1 = new Complex(9.1, 1.9);
+        Complex n2 = new Complex(4.4, 2.3);
+        Complex temp;
+        temp = add(n1, n2);
+        
+        System.out.printf("Complex no is: %.1f + %.1f", temp.real, temp.imag);  //Formatted output
+        
+    }
+    
+    
+    public static Complex add(Complex n1, Complex n2)
+    {
+    
+    Complex temp = new Complex(0.00, 0.00);
+    
+    temp.real = n1.real + n2.real;
+    temp.imag = n1.imag + n2.imag;
+    
+    return (temp);
+}
+    
+
+}   
