@@ -1,0 +1,102 @@
+/**
+ *Implementati clasa Stiva, care sa simuleze o lista LIFO de obiecte oarecare (stiva eterogena). Clasa trebuie sa aiba urmatoarele metode:
+empty : testeaza daca stiva este vida
+peek : returneaza elementul din varful stivei, fara a-l elimina din stiva
+pop : returneaza elementul din varful stivei si il elimina din stiva
+push : adauga un element in stiva
+search : cauta un element in stiva si returneaza distanta sa fata de varful stivei, respectiv 0 daca acesta nu este gasit.
+print sau toString : afiseaza continutul stivei
+ * @author Ciprian
+ */
+public class Mystack {
+    
+   private int maxSize;
+   private int top;
+   private long[] theStack;
+   
+   
+   public Mystack(int s){
+       
+       
+       maxSize = s;
+       theStack = new long[maxSize];
+       top = -1;
+       
+   }
+   
+   public void push(long j){
+       top++;
+       theStack[top] = j;
+       
+   }
+   
+   public long pop(){
+        return theStack[top--];
+    }
+   
+   public long peek(){
+       
+       return theStack[top];
+       
+   }  
+   
+   public boolean empty(){
+      
+    return (top == -1);
+    
+}
+   
+   public void print(){
+       
+       for(int i = 0;i<top;i++){
+           
+           System.out.print(theStack[i] + " ");
+       }
+       
+       
+   }
+   
+   
+   public int search(int j){
+       
+       for(int i = 0;i<=top;i++){
+           
+           if(theStack[i]==j){
+               
+               return (top - i);
+           }
+           
+           
+       }
+       
+        return 0;
+   }
+    
+    
+        
+        
+   
+   
+    public static void main(String[] args){
+        
+        
+        Mystack theStack = new Mystack(10);
+        
+        theStack.push(20);                          //push
+        theStack.push(44);
+        theStack.push(23);
+        theStack.push(50);
+        theStack.push(232);
+        theStack.print();
+       int search = theStack.search(20);
+       long value = theStack.pop();                 //pop
+       System.out.println(value);
+       System.out.println();
+       System.out.println(theStack.search(20));     //search
+       boolean empty = theStack.empty();
+       System.out.println(empty);                   //empty
+       System.out.println(theStack.peek());         // return 50 because we have pop() called before
+       
+    }
+   
+}
