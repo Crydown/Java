@@ -1,0 +1,9 @@
+EX2. 
+Scrieti un program care sa simuleze un 'shell' pentru lucrul cu fisiere. Aplicatia trebuie sa permita:
+  -listarea fisierelor dintr-un director sau directorul curent
+  -listarea continutului unui fisier
+  -schimbarea directorului curent
+  -crearea unui nou director
+  -stergerea/redenumirea unui fisier/director
+  -concatenarea a doua sau mai multor fisiere
+  -aflarea informatiilor despre un fisier/director
