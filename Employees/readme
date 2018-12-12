@@ -1,0 +1,8 @@
+ Scrieti o aplicatie care sa gestioneze angajatii unei companii.
+ Informatiile care vor trebui memorate pentru fiecare angajat sunt: cod, nume, salar, data angajarii, adresa, telefon.
+ Programul trebuie sa permita:
+  -adaugarea unui nou angajat
+  -modificarea informatiilor despre un angajat existent 
+  -stergerea unui angajat (not fully implemented, must be fixed) 
+  -listarea angajatilor curenti
+  -cautarea unei persoane dupa nume sau cod  (NOT IMPLEMENTED)
