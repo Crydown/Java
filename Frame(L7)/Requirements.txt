@@ -1,0 +1,3 @@
+1. Sa se scrie un program care afiseaza o fereastra pe suprafata careia sa se regaseasca urmatoarele tipuri de componente:
+ Label, Button, Checkbox, Choice, List, Scrollbar, TextField, TextArea.
+ Pentru fiecare componenta tratati cel putin unul din evenimentele pe care le poate genera.
