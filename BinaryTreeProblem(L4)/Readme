@@ -1,0 +1,4 @@
+Sa se implementeze clasa ArboreBinar care sa permita crearea, modificarea si parcurgerea(explorarea) unui arbore binar.
+La parcurgerea arborelui, in fiecare nod trebuie sa se execute prelucrarea informatiei din el prin intermediul unei
+functii primite ca parametru. (exemple de functii: afisarea informatiei din nod in diferite formate) 
+
