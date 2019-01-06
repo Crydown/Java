@@ -1,0 +1,4 @@
+1. Scrieti o aplicatie care sa afiseze numerele prime de la 1 la N:
+ a) fara a folosi fire de executie si 
+ b) folosind un numar specificat K de fire de executie (N si K vor fi citite de la tastatura sau de la linia de comanda).
+Cronometrati timpii de executie.
