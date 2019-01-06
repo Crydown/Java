@@ -1,0 +1,4 @@
+2. Scrieti o aplicatie care gestioneaza un mini-dictionar român - englez. Programul trebuie sa permita adaugarea, stergerea de definitii,
+salvarea dictionarului pe disc, respectiv incarcarea acestuia in memorie.  
+Folositi clasa HashMap pentru reprezentarea dictionarului. 
+Folositi serializarea pentru salvarea/restaurarea dictionarului.
