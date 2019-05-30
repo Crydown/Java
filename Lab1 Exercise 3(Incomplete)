@@ -1,15 +1,3 @@
-Exercise 3 
-
-Sa se scrie o aplicatie Java care :
-genereaza un vector de n numere intregi cuprinse in intervalul [a,b], unde a,b si n sunt primite ca argumente de la linia de comanda
-sorteaza vectorul generat folosind, pe rand, algoritmul BubbleSort si metoda sort din clasa Arrays.
-afiseaza timpii estimativi de executie pentru fiecare din procedee
-
-Pentru aflarea timpului necesar executie unei secvente de cod se va folosi metoda currentTimeMillis din clasa System
-
-// Trebuie sa implementez Bubble Sort
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -49,10 +37,10 @@ public class Vectors {
     int result;
     Random rand = new Random();
     long t1 = 0, t2 = 0;
+    int aux; // variable for interchange
     
     Vector<Integer> vec = new Vector<Integer>(n);
-    t1 = (int) System.currentTimeMillis();
-    //t1 = (int) System.nanoTime();
+    
     for(int i = 0;i<n; i++){
         
         
@@ -61,27 +49,53 @@ public class Vectors {
         
     }
     
+    System.out.println("Displaying vector");
+    
     for(int i = 0;i < n;i++){
         
-       System.out.println(vec.get(i));
+       System.out.print(vec.get(i) + " ");
       
     }
     
-    Collections.sort(vec);
-    System.out.println("After Collection Method");
+    t1 = (int) System.currentTimeMillis();
+    //t1 = (int) System.nanoTime();
     
+//    Collections.sort(vec);   // nu merge metoda Arrays.sort()
+//    System.out.println("After Collection Method");
+
+    System.out.println("Bubble sort!! ");
+    for(int i = 0;i < n-1; i++){
+        
+        for(int j = 0; j< n-i-1;j++){
+            
+            if(vec.get(j)>vec.get(j+1)){
+                
+                aux = vec.get(j);
+                vec.set(j,vec.get(j+1));
+                vec.set(j+1,aux);
+                
+                
+            }
+            
+            
+        }
+    }
+    
+    
+    t2 = (int) System.currentTimeMillis();
+    System.out.println("Sorted!");
     for(int i = 0;i < n;i++){
-        t2 = (int) System.currentTimeMillis();
+        
       //  t2 = (int) System.nanoTime();
-       System.out.println(vec.get(i));
+       System.out.print(vec.get(i)+ " ");
         
         
     }
-    t2 = (int) System.currentTimeMillis();
-    long elapsedTime = t2 - t1;
     
-    System.out.println("Total time is:" + t1 + "s");
-    System.out.println("Total time is:" + t2 + "s");
+    long elapsedTime = (t2) - (t1);
+    
+    System.out.println("Total t1:" + t1 + "ms");
+    System.out.println("Total t2" + t2 + "ms");
     System.out.println("Total time is:" + elapsedTime + "ms");
 }
     
